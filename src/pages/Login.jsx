@@ -69,7 +69,10 @@ const Login = () => {
                 </label>
               </div>
               <div className="form-control mt-6">
-                <button type="submit" className="btn btn-primary">
+                <button
+                  type="submit"
+                  className="btn btn-primary bg-cyan-500 border-0 text-white font-semibold"
+                >
                   Login
                 </button>
               </div>
@@ -77,7 +80,7 @@ const Login = () => {
             <p>
               New to this page? please
               <Link to="/register">
-                <button className="btn btn-link">Register</button>
+                <button className="btn btn-link text-cyan-500">Register</button>
               </Link>
             </p>
             <SocialLogin></SocialLogin>

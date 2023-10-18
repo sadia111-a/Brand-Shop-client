@@ -1,6 +1,3 @@
-import { NavLink } from "react-router-dom";
-import Navbar from "./Navbar";
-
 const Header = () => {
   return (
     <div>
@@ -16,7 +13,7 @@ const Header = () => {
             </h1>
             <p className="font-light text-3xl mt-5"></p>
             <a className="px-5 py-2 inline-block bg-cyan-500 text-white hover:bg-cyan-300 transparent">
-              Get Started
+              Beauty Range
             </a>
           </div>
         </div>

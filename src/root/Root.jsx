@@ -7,9 +7,13 @@ import Header from "../Navbar/Header";
 const Root = () => {
   return (
     <div className="max-w-7xl mx-auto font-poppins">
-      <Navbar></Navbar>
-      {/* <Header></Header> */}
-      <Outlet></Outlet>
+      <div className="">
+        <Navbar></Navbar>
+      </div>
+
+      <div className="">
+        <Outlet></Outlet>
+      </div>
       <Footer></Footer>
     </div>
   );

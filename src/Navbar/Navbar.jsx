@@ -8,7 +8,7 @@ import { AuthContext } from "../provider/AuthProvider";
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
   return (
-    <div className="bg-gradient-to-r from-cyan-800 to-sky-500 shadow-xl mb-3 rounded-md text-white">
+    <div className=" bg-gradient-to-r from-cyan-800 to-sky-500 shadow-xl mb-3 rounded-md text-white">
       <div className="navbar text-white">
         <div className="navbar-start">
           <div className="dropdown">
