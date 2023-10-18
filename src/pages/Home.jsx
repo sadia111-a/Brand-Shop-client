@@ -1,7 +1,9 @@
+import Header from "../Navbar/Header";
+
 const Home = () => {
   return (
     <div>
-      <h2 className="text-2xl">This is Home page</h2>
+      <Header></Header>
     </div>
   );
 };
