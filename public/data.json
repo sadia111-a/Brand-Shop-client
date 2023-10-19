@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "image": "https://i.ibb.co/3zG6Rqv/pexels-behrouz-alimardani-10644997.jpg",
+    "brand_name": "L'Oréal"
+  },
+  {
+    "id": 2,
+    "image": "https://i.ibb.co/5v8xg6v/pexels-tati-lebedenko-16181775.jpg",
+    "brand_name": "Estée Lauder"
+  },
+  {
+    "id": 3,
+    "image": "https://i.ibb.co/c6Rsk9F/pexels-yulia-h-11028230.jpg",
+    "brand_name": "Chanel"
+  },
+  {
+    "id": 4,
+    "image": "https://i.ibb.co/B4sfQc0/pexels-tamilles-esposito-15722457.jpg",
+    "brand_name": "Dior"
+  },
+  {
+    "id": 5,
+    "image": "https://i.ibb.co/Gdns4vd/pexels-suzy-hazelwood-1202961.jpg",
+    "brand_name": "Revlon"
+  },
+  {
+    "id": 6,
+    "image": "https://i.ibb.co/09ymqjD/Urban-Decay-Cosmetics-Island-Main.webp",
+    "brand_name": "Urban Decay"
+  }
+]

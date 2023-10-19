@@ -2,7 +2,9 @@ const TodaysDeal = () => {
   return (
     <div>
       <div>
-        <h2 className="text-5xl font-bold mt-10 mb-5">Today's deals</h2>
+        <h2 className="text-5xl text-center font-bold mt-10 mb-5">
+          Today's deals
+        </h2>
       </div>
       <div className="carousel w-full">
         <div id="item1" className="carousel-item w-full">
