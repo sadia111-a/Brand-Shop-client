@@ -1,3 +1,5 @@
+import DarkMode from "../components/DarkMode";
+
 const Header = () => {
   return (
     <div>

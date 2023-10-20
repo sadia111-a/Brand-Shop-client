@@ -2,6 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
 import { useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
+import DarkMode from "../components/DarkMode";
 // import useAuth from "../Hooks/useAuth";
 // import useAuth from "../Hooks/useAuth";
 
@@ -102,6 +103,9 @@ const Navbar = () => {
                   Register
                 </NavLink>
               </li>
+              <div className="text-black">
+                <DarkMode></DarkMode>
+              </div>
             </ul>
           </div>
           <div className="  lg:px-3 rounded-md font-extrabold text-lg text-red-500 lg:text-3xl">
@@ -210,6 +214,9 @@ const Navbar = () => {
               <button className="btn btn-sm  btn-ghost">Login</button>
             </Link>
           )}
+        </div>
+        <div className="hidden lg:block">
+          <DarkMode></DarkMode>
         </div>
       </div>
     </div>
