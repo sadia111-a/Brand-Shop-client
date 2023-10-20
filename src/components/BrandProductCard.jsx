@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 const BrandProductCard = ({ product }) => {
-  const { brand_name, name, type, price, rating, description, photo } =
+  const { _id, brand_name, name, type, price, rating, description, photo } =
     product || {};
   return (
     <div>
@@ -24,7 +24,7 @@ const BrandProductCard = ({ product }) => {
                 Details
               </button>
             </Link>
-            <Link to="/update">
+            <Link to={`/update/${_id}`}>
               <button className="btn btn-primary font-bold bg-cyan-500 border-0 text-white">
                 Update
               </button>
