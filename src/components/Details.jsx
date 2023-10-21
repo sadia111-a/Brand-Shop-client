@@ -11,8 +11,8 @@ const Details = () => {
   // console.log(_id);
 
   const [product, setProduct] = useState({});
-  const { _id } = useParams();
-  const brands = useLoaderData();
+  const { _id } = useParams({});
+  // const brands = useLoaderData();
 
   useEffect(() => {
     fetch(`http://localhost:5000/product/${_id}`)

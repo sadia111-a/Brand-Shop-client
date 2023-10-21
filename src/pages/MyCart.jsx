@@ -1,14 +1,21 @@
 import { useLoaderData } from "react-router-dom";
 import Card from "./Card";
+import { useState } from "react";
 
 const MyCart = () => {
-  const brands = useLoaderData();
+  const loadedProduct = useLoaderData();
+  const [products, setProducts] = useState(loadedProduct);
   return (
     <div>
-      <h2 className="text-2xl">This is My Cart page:{brands.length}</h2>
+      <h2 className="text-2xl">This is My Cart page:{products.length}</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5 py-10 ">
-        {brands.map((brand) => (
-          <Card key={brand._id} brand={brand}></Card>
+        {products.map((product) => (
+          <Card
+            key={product._id}
+            product={product}
+            products={products}
+            setProducts={setProducts}
+          ></Card>
         ))}
       </div>
     </div>
