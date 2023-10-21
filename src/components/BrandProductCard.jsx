@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 const BrandProductCard = ({ product }) => {
   const { _id, brand_name, name, type, price, rating, description, photo } =
     product || {};
+
   return (
     <div>
       <div className="card bg-base-100 shadow-xl">
