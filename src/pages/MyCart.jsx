@@ -7,7 +7,7 @@ const MyCart = () => {
   const [products, setProducts] = useState(loadedProduct);
   return (
     <div>
-      <h2 className="text-2xl">This is My Cart page:{products.length}</h2>
+      <h2 className="text-2xl text-center"> My Cart </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5 py-10 ">
         {products.map((product) => (
           <Card

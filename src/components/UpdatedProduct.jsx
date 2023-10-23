@@ -2,9 +2,12 @@ import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const UpdatedProduct = () => {
-  const product = useLoaderData();
+  const allUpdate = useLoaderData();
+  console.log(allUpdate);
+
   const { _id, brand_name, name, type, price, rating, description, photo } =
-    product || {};
+    allUpdate || {};
+
   const handleUpdateProduct = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -15,7 +18,7 @@ const UpdatedProduct = () => {
     const rating = form.rating.value;
     const description = form.description.value;
     const photo = form.photo.value;
-    const updateProduct = {
+    const updatedProduct = {
       brand_name,
       name,
       type,
@@ -24,14 +27,14 @@ const UpdatedProduct = () => {
       description,
       photo,
     };
-    console.log(updateProduct);
+    console.log(updatedProduct);
     // send data to the server
     fetch(`http://localhost:5000/product/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify(updateProduct),
+      body: JSON.stringify(updatedProduct),
     })
       .then((res) => res.json())
       .then((data) => {
@@ -39,7 +42,7 @@ const UpdatedProduct = () => {
         if (data.modifiedCount > 0) {
           Swal.fire({
             title: "Success!",
-            text: "Product updated successfully",
+            text: "Product Updated successfully",
             icon: "success",
             confirmButtonText: "Cool",
           });
@@ -53,7 +56,7 @@ const UpdatedProduct = () => {
       </h2>
 
       <form onSubmit={handleUpdateProduct}>
-        {/* form brand_name and Name row */}
+        {/* form Brand Name and Name row */}
         <div className="md:flex mb-8">
           <div className="form-control md:w-1/2">
             <label className="label">
@@ -62,9 +65,9 @@ const UpdatedProduct = () => {
             <label className="input-group">
               <input
                 type="text"
-                defaultValue={brand_name}
                 placeholder="Brand Name"
                 name="brand_name"
+                defaultValue={brand_name}
                 className="w-full input input-bordered"
               />
             </label>
@@ -78,7 +81,7 @@ const UpdatedProduct = () => {
                 type="text"
                 name="name"
                 defaultValue={name}
-                placeholder="name"
+                placeholder="Name"
                 className="w-full input input-bordered"
               />
             </label>
@@ -93,7 +96,7 @@ const UpdatedProduct = () => {
             <label className="input-group">
               <input
                 type="text"
-                placeholder="Type"
+                placeholder="Type of product"
                 name="type"
                 defaultValue={type}
                 className="w-full input input-bordered"
@@ -109,7 +112,7 @@ const UpdatedProduct = () => {
                 type="text"
                 name="price"
                 defaultValue={price}
-                placeholder="price$"
+                placeholder="Price $"
                 className="w-full input input-bordered"
               />
             </label>
@@ -124,7 +127,7 @@ const UpdatedProduct = () => {
             <label className="input-group">
               <input
                 type="text"
-                placeholder="rating"
+                placeholder="Rating"
                 name="rating"
                 defaultValue={rating}
                 className="w-full input input-bordered"
@@ -138,7 +141,7 @@ const UpdatedProduct = () => {
             <label className="input-group">
               <input
                 type="text"
-                name="details"
+                name="description"
                 defaultValue={description}
                 placeholder="Details"
                 className="w-full input input-bordered"
@@ -167,7 +170,7 @@ const UpdatedProduct = () => {
         <input
           type="submit"
           value="Update Product"
-          className="btn btn-block bg-cyan-500"
+          className="btn btn-block bg-cyan-500 font-bold text-white hover:bg-cyan-700"
         />
       </form>
     </div>

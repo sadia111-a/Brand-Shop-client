@@ -1,6 +1,6 @@
 # Live link of my project
 
-- https://brand-shop-f0453.web.app/
+- https://brand-shop-f0453.web.app
 
 ## five features and functionalities of my website:
 
