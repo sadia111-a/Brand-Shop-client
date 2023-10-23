@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const BrandCard = ({ brand }) => {
   const { image, brand_name } = brand || {};
   return (
-    <Link to="/brandProduct">
+    <Link to={`/brandProduct/${brand_name}`}>
       <div className=" bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
         <a href="#">
           <img className="rounded-t-lg h-[400px] w-full" src={image} alt="" />

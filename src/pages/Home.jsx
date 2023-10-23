@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import Header from "../Navbar/Header";
 import BeautyServices from "../components/BeautyServices";
 import TodaysDeal from "../components/TodaysDeal";
@@ -11,7 +11,9 @@ const Home = () => {
   return (
     <div className="dark:bg-grey-900">
       <Header></Header>
+
       <Brands brands={brands}></Brands>
+
       <BeautyServices></BeautyServices>
       <TodaysDeal></TodaysDeal>
     </div>

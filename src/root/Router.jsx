@@ -49,7 +49,7 @@ const router = createBrowserRouter([
         element: <Register></Register>,
       },
       {
-        path: "/brandProduct",
+        path: "/brandProduct/:brand_name",
         element: (
           <PrivateRoute>
             <BrandProduct></BrandProduct>

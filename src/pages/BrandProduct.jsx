@@ -3,16 +3,22 @@ import BrandProductCard from "../components/BrandProductCard";
 import { useEffect, useState } from "react";
 
 const BrandProduct = () => {
-  // const { brand_name } = useParams();
-  // const { brand_name } = useLoaderData("");
-  // const [products, setProducts] = useState([]);
-
-  // useEffect(() => {
-  //   fetch(`/product/${brand_name}`)
-  //     .then((response) => response.json())
-  //     .then((data) => setProducts(data));
-  // }, [brand_name]);
   const products = useLoaderData();
+  const params = useParams();
+  const { brand_name } = params;
+  useEffect(() => {
+    // Fetch data from your database (replace with your actual API endpoint)
+    fetch("http://localhost:5000/product")
+      .then((response) => response.json())
+      .then((data) => {
+        // Filter products that match the brand_name from the database
+        const filteredProducts = data.filter(
+          (product) => product.brand_name === brand_name
+        );
+        setProducts(filteredProducts);
+      });
+  }, [brand_name]);
+  const [filteredProducts, setProducts] = useState([]);
 
   return (
     <div>
@@ -60,13 +66,17 @@ const BrandProduct = () => {
           </div>
         </div>
       </div>
-      {/* <div>
-        <h2 className="text-2xl">Products from {brand_name}</h2>
-        {products.length === 0 ? (
-          <p>No products available for this brand.</p>
+      <div>
+        <h2 className="text-4xl text-center font-bold py-5">
+          Products from: {brand_name}
+        </h2>
+        {filteredProducts.length === 0 ? (
+          <p className="text-2xl text-cyan-700 font-bold text-center py-20">
+            No products available for this brand.
+          </p>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10">
-            {products?.map((product) => (
+            {filteredProducts?.map((product) => (
               <BrandProductCard
                 key={product._id}
                 product={product}
@@ -74,18 +84,18 @@ const BrandProduct = () => {
             ))}
           </div>
         )}
-      </div> */}
-      <div>
-        <h2 className="text-2xl">Products from {products.length}</h2>
+      </div>
+      {/* <div>
+        <h2 className="text-2xl">Products from : {products.brand_name}</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10">
-          {products?.map((product) => (
+          {filteredProducts?.map((product) => (
             <BrandProductCard
               key={product._id}
               product={product}
             ></BrandProductCard>
           ))}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

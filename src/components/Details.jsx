@@ -5,9 +5,9 @@ import DetailsCard from "./DetailsCard";
 const Details = () => {
   const [brand, setBrand] = useState({});
   const { _id } = useParams();
-  console.log(_id);
+  // console.log(_id);
   const allProduct = useLoaderData();
-  console.log(allProduct);
+  // console.log(allProduct);
   // console.log(_id);
 
   // const [product, setProduct] = useState({});
@@ -38,7 +38,7 @@ const Details = () => {
     const findBrand = allProduct?.find((brand) => brand._id == _id);
     setBrand(findBrand);
   }, [_id, allProduct]);
-  console.log(brand);
+  // console.log(brand);
   return (
     <div>
       <DetailsCard brand={brand}></DetailsCard>
