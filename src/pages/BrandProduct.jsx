@@ -7,7 +7,6 @@ const BrandProduct = () => {
   const params = useParams();
   const { brand_name } = params;
   useEffect(() => {
-    // Fetch data from your database (replace with your actual API endpoint)
     fetch("http://localhost:5000/product")
       .then((response) => response.json())
       .then((data) => {

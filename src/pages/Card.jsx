@@ -46,15 +46,17 @@ const Card = ({ product, setProducts, products }) => {
           <div>
             <h2 className="card-title">Name:{name}</h2>
             <h2 className="card-title">BrandName:{brand_name}</h2>
-            <p>{type}</p>
-            <p>{price}</p>
-            <p>{rating}</p>
-            <p>{description}</p>
+            <p>Type:{type}</p>
+            <p>Price:{price}$</p>
+            <p>Rating:{rating}</p>
+            {/* <p>Details:{description}</p> */}
           </div>
           <div className="card-actions justify-end">
             <div className="btn-group btn-group-vertical space-y-4">
-              <button className="btn btn-active">View</button>
-              <Link to={`/updateCoffee/${_id}`}>
+              <Link to={`/details/${_id}`}>
+                <button className="btn w-full btn-active">View</button>
+              </Link>
+              <Link to={`/updateProduct/${_id}`}>
                 <button className="btn w-full bg-slate-400">Edit</button>
               </Link>
               <button
