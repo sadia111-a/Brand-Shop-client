@@ -1,6 +1,6 @@
 # Live link of my project
 
-- https://brand-shop-f0453.web.app
+- https://obsequious-glue.surge.sh/
 
 ## Five key points about my website:
 
