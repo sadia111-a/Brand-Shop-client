@@ -1,6 +1,6 @@
 # Live link of my project
 
-- https://obsequious-glue.surge.sh/
+- https://direful-time.surge.sh/
 
 ## Five key points about my website:
 
