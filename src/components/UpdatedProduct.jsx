@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
@@ -29,13 +30,16 @@ const UpdatedProduct = () => {
     };
     console.log(updatedProduct);
     // send data to the server
-    fetch(`http://localhost:5000/product/${_id}`, {
-      method: "PUT",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(updatedProduct),
-    })
+    fetch(
+      `https://brand-shop-server-er5zvqvvc-sadia-rahmans-projects.vercel.app/product/${_id}`,
+      {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(updatedProduct),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -51,6 +55,9 @@ const UpdatedProduct = () => {
   };
   return (
     <div className="bg-[#F4F3F0] p-24">
+      <Helmet>
+        <title>Brand-Shop || UpdateProduct</title>
+      </Helmet>
       <h2 className="text-3xl text-center font-extrabold mb-8">
         Update Product:{name}
       </h2>

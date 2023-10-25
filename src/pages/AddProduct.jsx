@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Swal from "sweetalert2";
 
 const AddProduct = () => {
@@ -22,13 +23,16 @@ const AddProduct = () => {
     };
     console.log(newProduct);
     // send data to the server
-    fetch(" http://localhost:5000/product", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(newProduct),
-    })
+    fetch(
+      " https://brand-shop-server-er5zvqvvc-sadia-rahmans-projects.vercel.app/product",
+      {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(newProduct),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -44,6 +48,9 @@ const AddProduct = () => {
   };
   return (
     <div className="bg-[#F4F3F0] p-24">
+      <Helmet>
+        <title>Brand-Shop || Add Product</title>
+      </Helmet>
       <h2 className="text-3xl text-center font-extrabold mb-8">Add Product</h2>
 
       <form onSubmit={handleAddProduct}>

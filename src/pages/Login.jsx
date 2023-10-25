@@ -3,6 +3,7 @@ import SocialLogin from "../components/SocialLogin";
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import swal from "sweetalert";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
   const { signIn } = useContext(AuthContext);
@@ -32,6 +33,9 @@ const Login = () => {
   };
   return (
     <div className="hero min-h-screen bg-base-200">
+      <Helmet>
+        <title>Brand-Shop || Login</title>
+      </Helmet>
       <div className="hero-content flex-col ">
         <div className="text-center ">
           <h1 className="text-5xl font-bold">Login now!</h1>

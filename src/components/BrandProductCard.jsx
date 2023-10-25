@@ -16,7 +16,7 @@ const BrandProductCard = ({ product }) => {
           <h2 className="card-title">Name:{name}</h2>
           <div className="flex">
             <p>Type:{type}</p>
-            <p>Price:{price}$</p>
+            <p>Price:${price}</p>
             <p>Rating:{rating}</p>
           </div>
           <div className="card-actions ">

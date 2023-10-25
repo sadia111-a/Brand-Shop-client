@@ -1,8 +1,12 @@
+import { Helmet } from "react-helmet-async";
 import BrandCard from "./BrandCard";
 import PropTypes from "prop-types";
 const Brands = ({ brands }) => {
   return (
     <div className="min-h-[60vh] mt-10">
+      <Helmet>
+        <title>Brand-Shop || Brands</title>
+      </Helmet>
       <div>
         <h2 className="text-4xl text-center font-bold mb-4">All Our Brands</h2>
       </div>

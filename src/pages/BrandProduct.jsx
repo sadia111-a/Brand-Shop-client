@@ -1,13 +1,16 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import BrandProductCard from "../components/BrandProductCard";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 const BrandProduct = () => {
   const products = useLoaderData();
   const params = useParams();
   const { brand_name } = params;
   useEffect(() => {
-    fetch("http://localhost:5000/product")
+    fetch(
+      "https://brand-shop-server-er5zvqvvc-sadia-rahmans-projects.vercel.app/product"
+    )
       .then((response) => response.json())
       .then((data) => {
         // Filter products that match the brand_name from the database
@@ -21,6 +24,9 @@ const BrandProduct = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Brand-Shop || Brand Product</title>
+      </Helmet>
       <div className="carousel w-full h-[500px]">
         <div id="slide1" className="carousel-item relative w-full">
           <img

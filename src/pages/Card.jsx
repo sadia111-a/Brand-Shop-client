@@ -16,9 +16,12 @@ const Card = ({ product, setProducts, products }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(` http://localhost:5000/product/${_id}`, {
-          method: "DELETE",
-        })
+        fetch(
+          ` https://brand-shop-server-er5zvqvvc-sadia-rahmans-projects.vercel.app/product/${_id}`,
+          {
+            method: "DELETE",
+          }
+        )
           .then((res) => res.json())
           .then((data) => {
             console.log(data);
@@ -42,7 +45,7 @@ const Card = ({ product, setProducts, products }) => {
         <figure>
           <img className="h-[200px]" src={photo} alt="Movie" />
         </figure>
-        <div className="flex w-3/4  justify-between ">
+        <div className="flex w-3/4 gap-4  justify-between ">
           <div>
             <h2 className="card-title">Name:{name}</h2>
             <h2 className="card-title">BrandName:{brand_name}</h2>

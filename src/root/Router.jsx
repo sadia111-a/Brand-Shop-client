@@ -37,7 +37,10 @@ const router = createBrowserRouter([
             <MyCart></MyCart>
           </PrivateRoute>
         ),
-        loader: () => fetch(" http://localhost:5000/product"),
+        loader: () =>
+          fetch(
+            "https://brand-shop-server-er5zvqvvc-sadia-rahmans-projects.vercel.app/product"
+          ),
       },
 
       {
@@ -55,7 +58,10 @@ const router = createBrowserRouter([
             <BrandProduct></BrandProduct>
           </PrivateRoute>
         ),
-        loader: () => fetch("http://localhost:5000/product"),
+        loader: () =>
+          fetch(
+            "https://brand-shop-server-er5zvqvvc-sadia-rahmans-projects.vercel.app/product"
+          ),
       },
       {
         path: "/details/:_id",
@@ -64,13 +70,22 @@ const router = createBrowserRouter([
             <Details></Details>
           </PrivateRoute>
         ),
-        loader: () => fetch(`http://localhost:5000/product`),
+        loader: () =>
+          fetch(
+            `https://brand-shop-server-er5zvqvvc-sadia-rahmans-projects.vercel.app/product`
+          ),
       },
       {
         path: "/updateProduct/:id",
-        element: <UpdatedProduct></UpdatedProduct>,
+        element: (
+          <PrivateRoute>
+            <UpdatedProduct></UpdatedProduct>
+          </PrivateRoute>
+        ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/product/${params.id}`),
+          fetch(
+            `https://brand-shop-server-er5zvqvvc-sadia-rahmans-projects.vercel.app/product/${params.id}`
+          ),
       },
     ],
   },

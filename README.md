@@ -2,9 +2,9 @@
 
 - https://brand-shop-f0453.web.app
 
-## five features and functionalities of my website:
+## Five key points about my website:
 
-- Product Update: My project allows users to update product details. Users can modify information such as brand name, name, type, price, rating, description, and photo for a specific product. The updated data is sent to the server via a PUT request.
+- User Authentication: My project includes user authentication, allowing users to register and log in to their accounts. This feature provides a secure and personalized experience for users.
 - Product Addition: Users can add new products to the system. They can input the brand name, name, type, price, rating, description, and photo for the new product. This data is sent to the server via a POST request.
 - Brand Product Display: In my project displays a list of products associated with a specific brand. Users can view products from a particular brand, and the products are presented in a grid layout. This provides a way to showcase a brand's product catalog.
 - Shopping Cart: My project includes a shopping cart feature. Users can add products to their cart, and the cart contents are displayed in a grid layout. Users can interact with the cart, such as removing items.
